@@ -13,14 +13,16 @@ module.exports = {
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ]
   },
-
-  // modules: [
-  //   {
-  //     proxy: {
-  //       '/restapi': { target: 'https://www.ele.me', ws: false}
-  //     }
-  //   }
-  // ],
+  modules: [
+    ['@nuxtjs/proxy']
+  ],
+  proxy: {
+    '/restapi': {
+      target: 'https://www.ele.me',
+      ws: false
+      // changeOrigin: true
+    }
+  },
   // /*
   // **  add CSS
   // */
